@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/stoykostanchev/basic-frontend-environment",
   "devDependencies": {
+    "browser-sync": "^2.12.8",
     "gulp": "^3.9.1",
     "gulp-sass": "^2.3.1"
   }
