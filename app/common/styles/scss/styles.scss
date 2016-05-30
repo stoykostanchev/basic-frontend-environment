@@ -1,4 +1,52 @@
 //styles.scss
 body{
   color : red;
+  padding : 0px;
+  margin : 0px;
 }
+
+
+.specs{
+  position : absolute;
+  width : 100%;
+  .specs-img{
+    margin : 0 auto;
+    display:block;
+    max-width : 1280px;
+    width: 100%; /*or your image's width*/
+    opacity: 0.5;
+    content:url("/specs/1280.png");
+    height : 1615px;
+  }
+}
+
+@media only screen and (max-width: 980px) {
+    .specs {
+      .specs-img {
+        max-width : 980px;
+        height : 1675px;
+        content:url("/specs/980.png");
+      }
+    }
+}
+
+@media only screen and (max-width: 750px) {
+    .specs {
+      .specs-img {
+        max-width : 750px;
+        height : 2170px;
+        content:url("/specs/750.png");
+      }
+    }
+}
+
+@media only screen and (max-width: 580px) {
+    .specs {
+      .specs-img {
+        height : 2250px;
+        max-width: 580px;
+        content:url("/specs/580.png");
+      }
+    }
+}
+

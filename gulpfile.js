@@ -3,6 +3,14 @@ var sass = require( "gulp-sass" );
 var less = require( "gulp-less" );
 var browserSync = require('browser-sync').create();
 
+gulp.task('compile_assets', function(){
+  return gulp.src('app/**/*.png')
+      .pipe(gulp.dest('dist'))
+      .pipe(browserSync.reload({
+          stream: true
+       }));
+});
+
 gulp.task('compile_html', function(){
   return gulp.src('app/**/*.html')
       .pipe(gulp.dest('dist'))
@@ -29,7 +37,7 @@ gulp.task('compile_scss', function(){
        }));
 });
 
-gulp.task('compile', [ 'compile_scss', 'compile_html', 'compile_less']);
+gulp.task('compile', [ 'compile_scss', 'compile_html', 'compile_less', 'compile_assets']);
 
 gulp.task('watch', ['browserSync', 'compile'], function(){
   gulp.watch('app/**/*.scss', [ 'compile_scss' ]);
