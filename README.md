@@ -1,3 +1,6 @@
-gulp compile_scss to compile and put the css into the dist/styles/css folder
-gulp watch - watches the .scss files and runs their compilation task
-https://css-tricks.com/gulp-for-beginners/
+- gulp compile_scss to compile and put the css into the dist/styles/css folder
+- gulp compile_less to compile and put the less from the components into the dist. TODO: Needs love on where the files are put
+- gulp compile_html puts the html in the dist folder
+- gulp compile executes all compile tasks
+- gulp watch - watches the file system, starts a browser and server for development runs 
+- https://css-tricks.com/gulp-for-beginners/
